@@ -5,7 +5,7 @@ MAS beersponsor3 {
 	agents:
         robot;
         owner;
-		sponsor agentArchClass beersponsor.SponsorGUI;
+		sponsor agentArchClass SponsorGUI;
 
 	aslSourcePath:
 		"src/asl";
