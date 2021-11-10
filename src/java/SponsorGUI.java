@@ -1,5 +1,3 @@
-package beersponsor;
-
 import java.awt.BorderLayout;
 
 
@@ -41,6 +39,7 @@ public class SponsorGUI extends AgArch {
         f.setVisible(true);
     }
 
+    @Override
     public void act(ActionExec action, List<ActionExec> feedback) {
         if (action.getActionTerm().getFunctor().startsWith("thankyou")) {
             jt.append("\n\rThank you "+action.getActionTerm().getTerm(0)+"!");
@@ -49,7 +48,7 @@ public class SponsorGUI extends AgArch {
             
             patronize.setEnabled(true); // enable GUI button
         } else {
-            super.act(action); // send the action to the environment to be performed.
+            super.act(action,feedback); // send the action to the environment to be performed.
         }    	
     }
 
